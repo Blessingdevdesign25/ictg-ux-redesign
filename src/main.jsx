@@ -6,9 +6,11 @@ import { ROUTER_FUTURE } from './routerFuture.js';
 import './styles/tokens.css';
 import './styles/base.css';
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter future={ROUTER_FUTURE}>
+    <BrowserRouter basename={basename} future={ROUTER_FUTURE}>
       <Routes>{appRoutes}</Routes>
     </BrowserRouter>
   </StrictMode>,
