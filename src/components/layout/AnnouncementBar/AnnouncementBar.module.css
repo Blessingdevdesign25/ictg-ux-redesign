@@ -1,0 +1,55 @@
+.bar {
+  background: var(--color-brand-600);
+  color: var(--color-on-dark);
+  font-size: var(--text-sm);
+}
+
+/* Blue focus ring on brand red is only 1.31:1 — use the white on-brand ring here */
+.bar :focus-visible {
+  outline: var(--focus-ring-on-brand);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: var(--tap-target);
+  padding-block: var(--space-1);
+}
+
+.text {
+  max-width: none;
+}
+
+.link {
+  color: var(--color-on-dark);
+  font-weight: var(--weight-semibold);
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--color-on-dark);
+  text-decoration-thickness: 2px;
+}
+
+.dismiss {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--tap-target);
+  height: var(--tap-target);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-on-dark);
+}
+
+.dismiss:hover {
+  background: var(--color-brand-700);
+}
+
+.dismiss svg {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}

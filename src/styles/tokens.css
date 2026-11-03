@@ -1,0 +1,131 @@
+/*
+ * Design tokens — source of truth: docs/03-DESIGN-SYSTEM.md
+ * Figma variable names must match these (without the leading --).
+ * Components must ONLY reference these tokens, never raw values.
+ */
+:root {
+  /* Colour — brand */
+  --color-brand-50: #fdecee;
+  --color-brand-600: #c8102e;
+  --color-brand-700: #a50d26;
+
+  /* Colour — ink (text) */
+  --color-ink-900: #111113;
+  --color-ink-700: #3a3a40;
+  --color-ink-500: #62626b;
+  --color-ink-300: #c9c9d1;
+
+  /* Colour — surfaces */
+  --color-surface-0: #ffffff;
+  --color-surface-50: #f6f6f8;
+  --color-surface-dark: #111113;
+  --color-on-dark: #ffffff;
+  --color-on-dark-muted: #b9b9c2;
+
+  /* Colour — utility */
+  --color-focus: #1a73e8;
+  --color-success-600: #1e7a3a;
+  --color-overlay: rgb(17 17 19 / 0.72);
+  --color-focus-on-brand: #ffffff; /* focus ring on brand-600: blue-on-red is only 1.31:1 */
+  --color-border-control: var(--color-ink-500); /* form-control boundary needs >= 3:1; ink-300 is 1.65:1 */
+  --color-surface-dark-raised: #2a2a30; /* panels on dark surfaces */
+
+  /* Gradients (placeholder imagery — no photos of people) */
+  --gradient-hero: radial-gradient(ellipse at 85% 10%, rgb(200 16 46 / 0.45), transparent 55%),
+    linear-gradient(160deg, #1d1d22 0%, #111113 65%);
+  --gradient-thumb-1: linear-gradient(135deg, #c8102e 0%, #5a0716 100%);
+  --gradient-thumb-2: linear-gradient(135deg, #3a3a40 0%, #111113 100%);
+  --gradient-thumb-3: linear-gradient(135deg, #a50d26 0%, #111113 100%);
+  --gradient-thumb-4: linear-gradient(135deg, #62626b 0%, #2a2a30 100%);
+
+  /* Typography */
+  --font-heading: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --tracking-wide: 0.08em;
+  --measure: 68ch;
+
+  /* Spacing (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  --section-py: var(--space-8);
+  --container-max: 1200px;
+  --container-gutter: var(--space-4);
+  --header-height: 4.5rem;
+  --tap-target: 44px;
+  --icon-sm: 1rem;
+  --icon-md: 1.5rem;
+  --icon-lg: 2rem;
+
+  /* Layering */
+  --z-header: 50;
+  --z-overlay: 60;
+  --z-skip: 100;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgb(17 17 19 / 0.06), 0 4px 16px rgb(17 17 19 / 0.06);
+  --shadow-raised: 0 8px 32px rgb(17 17 19 / 0.16);
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Focus */
+  --focus-ring: 3px solid var(--color-focus);
+  --focus-offset: 2px;
+  --focus-ring-on-brand: 3px solid var(--color-focus-on-brand);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --container-gutter: var(--space-6);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --text-base: 1.125rem;
+    --text-xl: 1.75rem;
+    --text-2xl: 2.25rem;
+    --text-3xl: 3.5rem;
+    --section-py: var(--space-9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}

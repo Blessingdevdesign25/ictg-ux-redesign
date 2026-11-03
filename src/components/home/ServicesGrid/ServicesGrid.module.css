@@ -1,0 +1,42 @@
+/* Flex-wrap (not grid) so the 3 + 2 desktop layout centres the last row */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-5);
+}
+
+.item {
+  flex: 1 1 100%;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: var(--space-7);
+  height: var(--space-7);
+  border-radius: var(--radius-md);
+  background: var(--color-brand-50);
+  color: var(--color-brand-700);
+}
+
+.icon svg {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+
+.body {
+  color: var(--color-ink-700);
+}
+
+@media (min-width: 640px) {
+  .item {
+    flex: 0 1 calc((100% - var(--space-5)) / 2);
+  }
+}
+
+@media (min-width: 960px) {
+  .item {
+    flex: 0 1 calc((100% - 2 * var(--space-5)) / 3);
+  }
+}

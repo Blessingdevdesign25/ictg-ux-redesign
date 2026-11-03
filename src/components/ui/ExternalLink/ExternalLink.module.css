@@ -1,0 +1,11 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.icon {
+  flex: none;
+  width: 0.85em;
+  height: 0.85em;
+}

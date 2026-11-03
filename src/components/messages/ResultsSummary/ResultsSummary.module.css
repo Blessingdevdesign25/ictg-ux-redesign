@@ -1,0 +1,8 @@
+.summary {
+  font-size: var(--text-sm);
+  color: var(--color-ink-700);
+}
+
+.summary strong {
+  color: var(--color-ink-900);
+}

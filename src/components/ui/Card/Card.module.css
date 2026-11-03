@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  height: 100%;
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-0);
+  box-shadow: var(--shadow-card);
+}
+
+.card :where(h2, h3) {
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  overflow-wrap: anywhere;
+}
+
+.interactive {
+  transition:
+    box-shadow var(--duration-base) var(--ease-standard),
+    transform var(--duration-base) var(--ease-standard);
+}
+
+.interactive:hover {
+  box-shadow: var(--shadow-raised);
+}
+
+/* Focus ring for a stretched link is shown on the whole card */
+.interactive:has(:global(.card-link):focus-visible) {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.interactive :global(.card-link):focus-visible {
+  outline: none;
+}
+
+.message,
+.project {
+  padding: 0;
+  overflow: hidden;
+}

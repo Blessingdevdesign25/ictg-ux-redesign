@@ -1,0 +1,37 @@
+.intro {
+  padding-block: var(--space-5) var(--space-7);
+  background: var(--color-surface-50);
+}
+
+.title {
+  margin-top: var(--space-3);
+}
+
+.lead {
+  margin-top: var(--space-4);
+  font-size: var(--text-lg);
+  color: var(--color-ink-700);
+}
+
+.body {
+  display: grid;
+  gap: var(--space-5);
+  padding-block: var(--space-6) var(--section-py);
+}
+
+.summary {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.note {
+  font-size: var(--text-sm);
+  color: var(--color-ink-500);
+}
+
+@media (min-width: 960px) {
+  .body {
+    margin-top: calc(-1 * var(--space-7));
+    padding-top: 0;
+  }
+}

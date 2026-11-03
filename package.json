@@ -1,0 +1,40 @@
+{
+  "name": "ictg-ux-redesign",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "UX redesign of the Faith Tabernacle ICTG home page and Messages Library (assessment).",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --max-warnings 0",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@vitejs/plugin-react": "^6.2.1",
+    "eslint": "^9.15.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^15.12.0",
+    "jsdom": "^25.0.1",
+    "vite": "^8.3.5",
+    "vitest": "^5.1.0",
+    "vitest-axe": "^0.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

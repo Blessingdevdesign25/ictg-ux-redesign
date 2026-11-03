@@ -1,0 +1,123 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: var(--color-surface-dark);
+  color: var(--color-on-dark);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: var(--header-height);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-extrabold);
+  font-size: var(--text-lg);
+  color: var(--color-on-dark);
+  text-decoration: none;
+  flex: none;
+}
+
+.logo:hover {
+  color: var(--color-on-dark);
+}
+
+.logo-accent {
+  margin-left: var(--space-1);
+  padding-inline: var(--space-1);
+  border-radius: var(--radius-sm);
+  background: var(--color-on-dark);
+  color: var(--color-brand-600);
+}
+
+/* Mobile (inside the menu panel): stacked list */
+.nav-list {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.nav-list > li {
+  border-bottom: 1px solid var(--color-surface-dark-raised);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 3rem;
+  color: var(--color-on-dark);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--color-on-dark);
+  text-decoration: underline;
+}
+
+.nav-link[aria-current='page'] {
+  font-weight: var(--weight-bold);
+  text-decoration: underline;
+  text-decoration-color: var(--color-brand-600);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.35em;
+}
+
+.cta {
+  align-self: flex-start;
+}
+
+@media (min-width: 960px) {
+  .nav {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .nav-list > li {
+    border-bottom: 0;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    min-height: var(--tap-target);
+    padding-inline: var(--space-2);
+    font-size: var(--text-sm);
+  }
+
+  .nav-link:hover {
+    text-decoration: none;
+    border-bottom-color: var(--color-on-dark-muted);
+  }
+
+  .nav-link[aria-current='page'] {
+    text-decoration: none;
+    border-bottom-color: var(--color-brand-600);
+  }
+
+  .cta {
+    align-self: center;
+    flex: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-link {
+    padding-inline: var(--space-3);
+  }
+}

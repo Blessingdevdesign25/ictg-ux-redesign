@@ -1,0 +1,34 @@
+.empty {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-4);
+  border: 1px dashed var(--color-ink-300);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-50);
+  text-align: center;
+}
+
+.icon-wrap {
+  display: grid;
+  place-items: center;
+  width: var(--space-8);
+  height: var(--space-8);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-0);
+  color: var(--color-ink-500);
+}
+
+.icon-wrap svg {
+  width: var(--icon-lg);
+  height: var(--icon-lg);
+}
+
+.title {
+  font-size: var(--text-xl);
+  overflow-wrap: anywhere;
+}
+
+.body {
+  color: var(--color-ink-500);
+}
