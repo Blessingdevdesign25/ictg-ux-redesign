@@ -6,7 +6,7 @@
   "description": "UX redesign of the Faith Tabernacle ICTG home page and Messages Library (assessment).",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/spa-fallback.mjs",
     "preview": "vite preview",
     "lint": "eslint . --max-warnings 0",
     "test": "vitest run",
